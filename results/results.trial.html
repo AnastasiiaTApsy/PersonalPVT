@@ -1,18 +1,18 @@
 
 <dl class="dl-horizontal result-info-table">
-    <dt>Mean</dt>
+    <dt>Середне значення</dt>
     <dd>{{ data.mean().toPrecision(5) }}</dd>
-    <dt>Median</dt>
+    <dt>Медіана</dt>
     <dd>{{ data.median().toPrecision(5) }}</dd>
-    <dt>Max</dt>
+    <dt>Макс</dt>
     <dd>{{ data.max().toPrecision(4) }}</dd>
-    <dt>Min</dt>
+    <dt>Хв</dt>
     <dd>{{ data.min().toPrecision(4) }}</dd>
-    <dt>Lapses <span class="mini-btn"><span ng-click="modifyThreshold(-100)">←</span><span ng-click="modifyThreshold(100)">{{ lapseThreshold }}ms→</span></span></dt>
+    <dt>Промахи <span class="mini-btn"><span ng-click="modifyThreshold(-100)">←</span><span ng-click="modifyThreshold(100)">{{ lapseThreshold }}ms→</span></span></dt>
     <dd>{{ data.lapses(lapseThreshold).length }}</dd>
 </dl>
 
-<h4>Response times</h4>
+<h4>Час реагування</h4>
 <div class="scatter-plot"><scatter-plot data="data.list" options="chartSettings"></scatter-plot></div>
 
 <div class="row choices">
