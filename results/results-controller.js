@@ -22,7 +22,7 @@ angular.module('pvtApp').controller('ResultsCtrl', function ($scope, $state, tri
 
     $scope.textForTrial = function (trial) {
         var data = analyzeData(trial.data);
-        return "Mean "+data.mean().toPrecision(4)+" | Lapses "+data.lapses(settings.lapse_threshold).length;
+        return "Середнє "+data.mean().toPrecision(4)+" | Пропуски "+data.lapses(settings.lapse_threshold).length;
     };
 
     $scope.idForTrial = function (trial) {
