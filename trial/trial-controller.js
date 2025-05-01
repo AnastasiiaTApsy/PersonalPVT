@@ -18,16 +18,12 @@ angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $docu
     };
 
 
-    trialTimer.onStop.add(function (value) {
+   trialTimer.onStop.add(function (value) {
     if (value >= 150 && value <= 1000) {
         $scope.data.push(value);
-
-        // Автоматическое завершение после 20 попыток
-        if ($scope.data.length >= 20) {
-            trialTimer.disable(); // это вызовет переход к результатам
-        }
     }
 });
+
     trialTimer.onDisable.add(function () {
         var date = trialStore.save($scope.data);
         $state.go('results.trial', { trialId: date }); // loads most recent result
