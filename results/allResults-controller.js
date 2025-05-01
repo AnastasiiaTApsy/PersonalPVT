@@ -33,7 +33,7 @@ angular.module("pvtApp").controller('AllResultsCtrl', function ($scope, $window,
         labels: dates,
         datasets: [
             {
-                label: "Mean",
+                label: "Середнє значення",
                 fillColor: "rgba(200,200,200,0.2)",
                 strokeColor: "rgba(200,200,200,1)",
                 pointColor: "rgba(200,200,200,1)",
@@ -49,7 +49,7 @@ angular.module("pvtApp").controller('AllResultsCtrl', function ($scope, $window,
         labels: dates,
         datasets: [
             {
-                label: "Lapses",
+                label: "Пропуски",
                 fillColor: "rgba(150,150,150,0.2)",
                 strokeColor: "rgba(150,150,150,1)",
                 pointColor: "rgba(150,150,150,1)",
