@@ -7,14 +7,14 @@ angular.module('pvtApp').controller('ResultsCtrl', function ($scope, $state, tri
     }
 
     $scope.titleForTrial = function (trial) {
-        var date = moment(trial.date).locale('uk');
+        var date = moment(trial.date).locale('uk'); // Устанавливаем локаль на украинский
         return date.format('D MMMM YYYY, h:mm a');
     };
 
     $scope.getDateSpan = function (trials) {
         if (trials.length > 0) {
-            var date1 = moment(trials[0].date);
-            var date2 = moment(trials[trials.length - 1].date);
+            var date1 = moment(trials[0].date).locale('uk'); // Устанавливаем локаль на украинский
+            var date2 = moment(trials[trials.length - 1].date).locale('uk'); // Устанавливаем локаль на украинский
             return date2.diff(date1, 'days') + 1;
         }
         return 0;
