@@ -7,8 +7,8 @@
             <p> {{ trials.length }} випробувань протягом {{ getDateSpan(trials) }} днів</p>
         </li>
         <li ng-repeat="(index, trial) in trials.toReversed()">
-            <a ui-sref=".trial({ trialId: idForTrial(trial) })" ui-sref-active="active"> {{ titleForTrial(пробна версія) }} </a>
-            <p>{{ textForTrial(пробна версія) }}</p>
+            <a ui-sref=".trial({ trialId: idForTrial(trial) })" ui-sref-active="active"> {{ titleForTrial(trial) }} </a>
+            <p>{{ textForTrial(trial) }}</p>
         </li>
     </ul>
 </div>
