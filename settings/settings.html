@@ -1,27 +1,27 @@
 <div>
-    <h1>Trial Settings</h1>
+    <h1>Налаштування</h1>
     <div class="row copy">
         <p class="col-xs-6 col-xs-offset-3">
-            Settings are automatically saved for this browser.
+            Налаштування для цього браузера зберігаються автоматично.
         </p>
     </div>
     <div class="form form-horizontal">
         <div class="form-group">
-            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Trial Length (sec)</label>
+            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Тривалість випробування (сек)</label>
             <div class="col-xs-2">
                 <input class="form-control" type="number" placeholder="600" id="trial-length"
                        ng-model="settings.trial_length"/>
             </div>
         </div>
         <div class="form-group">
-            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Lapse Threshold (ms)</label>
+            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Поріг затримки (мс)</label>
             <div class="col-xs-2">
                 <input class="form-control" type="number" placeholder="600" id="lapse-threshold"
                        ng-model="settings.lapse_threshold"/>
             </div>
         </div>
         <div class="form-group">
-            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Show Instructions</label>
+            <label for="trial-length" class="control-label col-xs-3 col-xs-offset-3">Показати інструкції</label>
             <div class="col-xs-2">
                 <div class="checkbox">
                     <label>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="choices">
-        <div class="col-xs-4 col-xs-offset-2"><a href="" ng-click="back()">&lt; Go Back &gt;</a></div>
-        <div class="col-xs-4"><a ui-sref="pretrial"><strong>&lt; Take Test &gt;</strong></a></div>
+        <div class="col-xs-4 col-xs-offset-2"><a href="" ng-click="back()">&lt; Назад &gt;</a></div>
+        <div class="col-xs-4"><a ui-sref="pretrial"><strong>&lt; < Назад > Пройти тест &gt;</strong></a></div>
     </div>
 </div>
