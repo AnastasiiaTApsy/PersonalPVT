@@ -27,7 +27,7 @@ angular.module("pvtApp").controller('AllResultsCtrl', function ($scope, $window,
 
     var means = data.map(function (x) { return analyzeData(x.data).mean(); });
     var lapses = data.map(function (x) { return analyzeData(x.data).lapses(settings.lapse_threshold).length; });
-    var dates = data.map(function (x) { return moment(x.date).locale('uk').format("D MMMM YYYY, h:mm a"); });
+    var dates = data.map(function (x) { return moment(x.date).format("DD.MM.YYYY, HH:mm"); }); // Формат даты и времени
 
     $scope.meanData = {
         labels: dates,
