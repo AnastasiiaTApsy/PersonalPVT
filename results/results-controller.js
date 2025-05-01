@@ -7,8 +7,8 @@ angular.module('pvtApp').controller('ResultsCtrl', function ($scope, $state, tri
     }
 
     $scope.titleForTrial = function (trial) {
-        var date = moment(trial.date);
-        return date.format('MMM Do h:mm a');
+        var date = moment(trial.date).locale('uk');
+        return date.format('D MMMM YYYY, h:mm a');
     };
 
     $scope.getDateSpan = function (trials) {
@@ -22,7 +22,7 @@ angular.module('pvtApp').controller('ResultsCtrl', function ($scope, $state, tri
 
     $scope.textForTrial = function (trial) {
         var data = analyzeData(trial.data);
-        return "Середнє "+data.mean().toPrecision(4)+" | Пропуски "+data.lapses(settings.lapse_threshold).length;
+        return "Середнє значення"+data.mean().toPrecision(4)+" | Пропуски "+data.lapses(settings.lapse_threshold).length;
     };
 
     $scope.idForTrial = function (trial) {
