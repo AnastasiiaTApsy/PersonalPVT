@@ -10,11 +10,11 @@ angular.module('pvtApp').directive('deleteAll', function ($timeout, $state, $q) 
             var messageIndex = 0;
             var timeoutPromise;
             var messages = [
-                {msg: "Delete All", wait: 2},
-                {msg: "You sure?", wait: 2},
-                {msg: "Double sure?", wait: 0},
-                {msg: "You can't undo!", wait: 1},
-                {msg: "Deleted", wait: 1, delete: true}
+                {msg: "Видалити все", wait: 2},
+                {msg: "Ви впевнені?", wait: 2},
+                {msg: "Двічі впевнені?", wait: 0},
+                {msg: "Це не можна скасувати!", wait: 1},
+                {msg: "Видалено", wait: 1, delete: true}
             ];
 
             element.on("$destroy", function () {
