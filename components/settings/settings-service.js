@@ -28,7 +28,7 @@ angular.module("pvtApp").factory('settings', function ($rootScope, $window) {
     // Setting definitions
 
     makeSetting("lapse_threshold", saved.lapse_threshold || 500); // lapse threshold in ms
-    makeSetting("trial_length", saved.trial_length || 600); // length of trial in seconds
+    makeSetting("trial_length", saved.trial_length || 240); // length of trial in seconds
     makeSetting("show_instructions", saved.show_instructions === false ? false : true);
 
     return settings;
