@@ -6,7 +6,7 @@
     <dd>{{ data.median().toPrecision(5) }}</dd>
     <dt>Макс</dt>
     <dd>{{ data.max().toPrecision(4) }}</dd>
-    <dt>Хв</dt>
+    <dt>Мін</dt>
     <dd>{{ data.min().toPrecision(4) }}</dd>
     <dt>Промахи <span class="mini-btn"><span ng-click="modifyThreshold(-100)">←</span><span ng-click="modifyThreshold(100)">{{ lapseThreshold }}ms→</span></span></dt>
     <dd>{{ data.lapses(lapseThreshold).length }}</dd>
