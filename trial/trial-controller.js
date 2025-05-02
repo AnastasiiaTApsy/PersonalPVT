@@ -18,11 +18,9 @@ angular.module('pvtApp').controller('TrialCtrl', function ($scope, $state, $docu
     };
 
 
-   trialTimer.onStop.add(function (value) {
-    if (value >= 150 && value <= 1000) {
-        $scope.data.push(value);
-    }
-});
+    trialTimer.onStop.add(function (value) {
+        if (value) { $scope.data.push(value); }
+    });
 
     trialTimer.onDisable.add(function () {
         var date = trialStore.save($scope.data);
